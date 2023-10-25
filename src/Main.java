@@ -76,18 +76,18 @@ public class Main {
         byte iceCream = 100;
         byte egg = 70;
 
-        int weigthInGramms = 5 * banana + 2 * milk + 2 * iceCream + 4 * egg;
-        System.out.println(weigthInGramms + " - вес в граммах");
+        int weightInGramms = 5 * banana + 2 * milk + 2 * iceCream + 4 * egg;
+        System.out.println(weightInGramms + " - вес в граммах");
 
-        float weigthInKilo = (float) weigthInGramms / 1000;
-        System.out.println(weigthInKilo + " - вес в килограммах");
+        float weightInKilo = (float) weightInGramms / 1000;
+        System.out.println(weightInKilo + " - вес в килограммах");
     }
 
     public static void task7(){
-        short weigth = 7000;
+        short weight = 7000;
 
-        System.out.println("Если в день худеть на 250 грамм, то можно похудеть за " + weigth / 250);
-        System.out.println("Если в день худеть на 500 грамм, то можно похудеть за " + weigth / 500);
+        System.out.println("Если в день худеть на 250 грамм, то можно похудеть за " + weight / 250);
+        System.out.println("Если в день худеть на 500 грамм, то можно похудеть за " + weight / 500);
     }
     public static void task8(){
         int mashaSalary = 67760;
