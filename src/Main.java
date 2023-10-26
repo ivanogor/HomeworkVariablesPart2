@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        task8();
+        task5();
     }
 
     public static void task1(){
@@ -62,12 +62,12 @@ public class Main {
 
     public static void task5(){
         byte wholePaint = 120;
-        byte numberForClasses = 20;
         byte brownPaintForOneClass = 4;
         byte whitePaintForOneClass = 2;
 
+        int numberForClasses = wholePaint / (brownPaintForOneClass + whitePaintForOneClass);
 
-        System.out.println("В школе, где " + numberForClasses + " классов, нужно " + wholePaint / whitePaintForOneClass + " банок белой краски и " + wholePaint / brownPaintForOneClass + " банок коричневой краски");
+        System.out.println("В школе, где " + numberForClasses + " классов, нужно " + whitePaintForOneClass * numberForClasses + " банок белой краски и " + brownPaintForOneClass * numberForClasses + " банок коричневой краски");
     }
 
     public static void task6(){
@@ -85,9 +85,12 @@ public class Main {
 
     public static void task7(){
         short weight = 7000;
+        int daysWith500Gramms = weight / 500;
+        int daysWith250Gramms = weight / 250;
 
-        System.out.println("Если в день худеть на 250 грамм, то можно похудеть за " + weight / 250);
-        System.out.println("Если в день худеть на 500 грамм, то можно похудеть за " + weight / 500);
+        System.out.println("Если в день худеть на 250 грамм, то можно похудеть за " + daysWith250Gramms + " дней.");
+        System.out.println("Если в день худеть на 500 грамм, то можно похудеть за " + daysWith500Gramms + " дней.");
+        System.out.println("В среднем можно похудеть за " + (daysWith500Gramms + daysWith250Gramms) / 2 + " день.");
     }
     public static void task8(){
         int mashaSalary = 67760;
@@ -95,12 +98,20 @@ public class Main {
         int crisSalary = 76230;
         float increase = 1.1f;
 
-        float newMashaSalary = mashaSalary * increase;
-        float newDenisSalary = denisSalary * increase;
-        float newCrisSalary = crisSalary * increase;
+        int mashaSalaryForYear= mashaSalary * 12;
+        int denisSalaryForYear = denisSalary * 12;
+        int crisSalaryForYear = crisSalary * 12;
 
-        System.out.println("Маша теперь получает " + newMashaSalary + " рублей. Годовой доход вырос на " + (newMashaSalary - mashaSalary) + " рублей");
-        System.out.println("Денис теперь получает " + newDenisSalary + " рублей. Годовой доход вырос на " + (newDenisSalary - denisSalary) + " рублей");
-        System.out.println("Кристина теперь получает " + newCrisSalary + " рублей. Годовой доход вырос на " + (newCrisSalary - crisSalary) + " рублей");
+        float newMashaSalaryForYear = mashaSalaryForYear * increase;
+        float newDenisSalaryForYear = denisSalaryForYear * increase;
+        float newCrisSalaryForYear = crisSalaryForYear * increase;
+
+        float mashaDiff = newMashaSalaryForYear -  mashaSalaryForYear;
+        float denisDiff = newDenisSalaryForYear - denisSalaryForYear;
+        float crisDiff = newCrisSalaryForYear - crisSalaryForYear;
+
+        System.out.println("Маша теперь получает " + newMashaSalaryForYear + " рублей. Годовой доход вырос на " + (mashaDiff) + " рублей");
+        System.out.println("Денис теперь получает " + newDenisSalaryForYear + " рублей. Годовой доход вырос на " + (denisDiff) + " рублей");
+        System.out.println("Кристина теперь получает " + newCrisSalaryForYear + " рублей. Годовой доход вырос на " + (crisDiff) + " рублей");
     }
 }
