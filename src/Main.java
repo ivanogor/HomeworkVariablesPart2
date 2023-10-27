@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        task5();
+        task4();
     }
 
     public static void task1(){
@@ -41,22 +41,22 @@ public class Main {
     }
 
     public static void task4(){
-        byte MINUTE = 1;
-        int HOUR = 60 * MINUTE;
-        int DAY = HOUR * 24; // minute in day;
+        byte minute = 1;
+        int hour = 60 * minute;
+        int day = hour * 24; // minute in day;
 
-        int work = 16 / (2 * MINUTE);
+        int work = 16 / (2 * minute);
 
-        int workInTwentyMinutes = 20 * MINUTE * work;
+        int workInTwentyMinutes = 20 * minute * work;
         System.out.println("За 20 минут машина произвела " + workInTwentyMinutes + " штук бутылок");
 
-        int workInDay = DAY * work;
+        int workInDay = day * work;
         System.out.println("За день машина произвела " + workInDay + " штук бутылок");
 
-        int workInThreeDay = 3 * DAY * work;
+        int workInThreeDay = 3 * day * work;
         System.out.println("За 3 дня машина произвела " + workInThreeDay + " штук бутылок");
 
-        int workInMonth = 30 * DAY * work;
+        int workInMonth = 30 * day * work;
         System.out.println("За месяц машина произвела " + workInMonth + " штук бутылок");
     }
 
